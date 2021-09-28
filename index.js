@@ -5,7 +5,6 @@ const info = require('./data.json');
 const pdffile = fs.readFileSync('2021-09-28_1.pdf');
 
 //get information
-const search = {};
 pdfparse(pdffile).then(function (data) {
     // console.log(data.numpages)
     // console.log(data.info)
