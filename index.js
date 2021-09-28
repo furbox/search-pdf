@@ -11,14 +11,15 @@ pdfparse(pdffile).then(function (data) {
     // console.log(data.info)
     // console.log(data.text)
     const text = data.text;
-    let matching = info.filter(function (doc) {
+    const found =info.filter(function (doc) {
         const index1 = text.indexOf(doc.name);
         const index2 = text.indexOf(doc.expediente);
         if (index1 > 1 || index2 > 1) {
             doc.ok = true;
+            return doc;
         } else {
             doc.ok = false;
         }
     });
-    console.log(info);
+    console.log(found);
 })
