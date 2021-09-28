@@ -2,7 +2,7 @@ const fs = require('fs');
 const pdfparse = require('pdf-parse');
 const info = require('./data.json');
 
-const pdffile = fs.readFileSync('2021-09-28_1.pdf');
+const pdffile = fs.readFileSync('./pdf/2021-09-28_1.pdf');
 
 //get information
 pdfparse(pdffile).then(function (data) {
@@ -21,4 +21,4 @@ pdfparse(pdffile).then(function (data) {
         }
     });
     console.log(found);
-})
+});
